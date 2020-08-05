@@ -4,406 +4,392 @@
 
 # 6.0.0
 
-- **BREAKING**: do not emit current state on subscription
-- **BREAKING**: `onError` in `BlocObserver` takes a `Cubit` as first parameter
-- **BREAKING**: allow blocs and cubits to emit the initial state
-- feat: include `cubit` and remove external dependency on [package:cubit](https://pub.dev/packages/cubit)
-  - exports class `Cubit`
-  - exports class `Change` (`Transition` for `Cubit`)
-- feat: `onChange` added to `BlocObserver`
-- refactor: apply additional lint rules
-- fix: add `@visibleForTesting` to `emit` on class `Cubit`
-- docs: fix inline documentation references
-
-# 6.0.0-dev.2
-
-- fix: add `@visibleForTesting` to `emit` on class `Cubit`
+- **BREAKING**: upgrade to `bloc ^6.0.0`
+- **BREAKING**: `BlocBuilder` interop with `cubit` (`bloc` parameter renamed to `cubit`)
+- **BREAKING**: `BlocListener` interop with `cubit` (`bloc` parameter renamed to `cubit`)
+- **BREAKING**: `BlocConsumer` interop with `cubit` (`bloc` parameter renamed to `cubit`)
+- feat: remove external dependency on [package:flutter_cubit](https://pub.dev/packages/flutter_cubit)
+- docs: inline documentation updates
+- docs: README updates
+- docs: example application updates
 
 # 6.0.0-dev.1
 
-- **BREAKING**: do not emit current state on subscription
-- **BREAKING**: `onError` in `BlocObserver` takes a `Cubit` as first parameter
-- **BREAKING**: allow blocs and cubits to emit the initial state
-- feat: include `cubit` and remove external dependency on [package:cubit](https://pub.dev/packages/cubit)
-  - exports class `Cubit`
-  - exports class `Change` (`Transition` for `Cubit`)
-- feat: `onChange` added to `BlocObserver`
-- refactor: apply additional lint rules
-- docs: fix inline documentation references
+- **BREAKING**: upgrade to `bloc ^6.0.0-dev.1`
+- **BREAKING**: `BlocBuilder` interop with `cubit` (`bloc` parameter renamed to `cubit`)
+- **BREAKING**: `BlocListener` interop with `cubit` (`bloc` parameter renamed to `cubit`)
+- **BREAKING**: `BlocConsumer` interop with `cubit` (`bloc` parameter renamed to `cubit`)
+- feat: remove external dependency on [package:flutter_cubit](https://pub.dev/packages/flutter_cubit)
+- docs: inline documentation updates
+- docs: README updates
+- docs: example application updates
 
 # 5.0.1
 
-- fix: upgrade to `cubit ^0.1.2`
+- fix: upgrade to `bloc ^5.0.1`
 - docs: minor documentation updates
 
 # 5.0.0
 
-- **BREAKING**: remove `initialState` override in favor of providing the initial state via super ([#1304](https://github.com/felangel/bloc/issues/1304)).
-- **BREAKING**: Remove `BlocSupervisor` and rename `BlocDelegate` to `BlocObserver`.
-- feat: support `null` states ([#1312](https://github.com/felangel/bloc/issues/1312)).
-- refactor: bloc to extend [cubit](https://pub.dev/packages/cubit) rather than `Stream`.
-- feat: ignore newly added events after bloc is closed ([#1236](https://github.com/felangel/bloc/issues/1236)).
-- feat: add `addError` to conform to `EventSink` interface.
-- feat: mark `onError`, `onTransition`, `onEvent` as `protected`.
-- docs: documentation improvements
+- **BREAKING**: `condition` on `BlocBuilder` renamed to `buildWhen`
+- **BREAKING**: `condition` on `BlocListener` renamed to `listenWhen`
+- **BREAKING**: upgrade to `bloc v5.0.0`
+- refactor: internal implementation updates to use [flutter_cubit](https://pub.dev/packages/flutter_cubit)
+- docs: various improvements
 - docs: logo updates
-
-# 5.0.0-dev.11
-
-- feat: add `addError` to conform to `EventSink` interface.
-- feat: mark `onError`, `onTransition`, `onEvent` as `protected`.
-
-# 5.0.0-dev.10
-
-- docs: additional minor improvement to bloc logo alignment
-
-# 5.0.0-dev.9
-
-- docs: minor improvement to bloc logo alignment
-
-# 5.0.0-dev.8
-
-- **BREAKING**: Remove `BlocSupervisor` and rename `BlocDelegate` to `BlocObserver`.
-
-# 5.0.0-dev.7
-
-- Ignore newly added events after bloc is closed ([#1236](https://github.com/felangel/bloc/issues/1236)).
-
-# 5.0.0-dev.6
-
-- Additional documentation optimizations.
 
 # 5.0.0-dev.5
 
-- Optimize documentation assets for smaller viewports.
+- Update to `bloc: ^5.0.0-dev.11`
+- Minor README updates
 
 # 5.0.0-dev.4
 
-- Update to [cubit](https://pub.dev/packages/cubit) `^0.0.13`
-- Update documentation and static assets.
+- Update to `bloc: ^5.0.0-dev.10`
+- Minor README updates
 
 # 5.0.0-dev.3
 
-- Update documentation and static assets.
+- Update to `bloc: ^5.0.0-dev.7`
 
 # 5.0.0-dev.2
 
-- **BREAKING**: update `initialState` to be a required positional parameter ([related issue](https://github.com/dart-lang/sdk/issues/42438)).
+- Update to `bloc: ^5.0.0-dev.6`
+- Update to `flutter_cubit ^0.0.12`
+- Various Documentation Updates
 
 # 5.0.0-dev.1
 
-- **BREAKING**: remove `initialState` override in favor of providing the initial state via super ([#1304](https://github.com/felangel/bloc/issues/1304)).
-- feat: support `null` states ([#1312](https://github.com/felangel/bloc/issues/1312)).
-- refactor: bloc to extend [cubit](https://pub.dev/packages/cubit) rather than `Stream`.
+- Update to `bloc: ^5.0.0-dev.3`
+- Internal implementation updates to use [flutter_cubit](https://pub.dev/packages/flutter_cubit)
+
+# 4.0.1
+
+- Fix `ProviderNotFoundException` handling ([#1286](https://github.com/felangel/bloc/pull/1286))
 
 # 4.0.0
 
-- Remove `rxdart` dependency ([#821](https://github.com/felangel/bloc/pull/821))
-- Replace `transformStates` with `transformTransitions` ([#840](https://github.com/felangel/bloc/pull/840))
-- Fix null `stackTrace` in `onError` ([#963](https://github.com/felangel/bloc/pull/963))
-- Fix remove duplicate terminating state
-- Add `mustCallSuper` to `onEvent`, `onTransition`, and `onError`
-- Surface Unhandled Bloc Errors in Debug Mode
-- Internal testing improvements
+- Update to `bloc: ^4.0.0`
+- Update to `provider: ^4.0.5`
 
 # 4.0.0-dev.4
 
-- Surface Unhandled Bloc Errors in Debug Mode
-- Internal testing improvements
+- Update to `bloc: ^4.0.0-dev.4`
 
 # 4.0.0-dev.3
 
-- Add `mustCallSuper` to `onEvent`, `onTransition`, and `onError`
+- Update to `bloc: ^4.0.0-dev.3`
 
 # 4.0.0-dev.2
 
-- Fix remove duplicate terminating state
+- Update to `bloc: ^4.0.0-dev.2`
 
 # 4.0.0-dev.1
 
-- Remove `rxdart` dependency ([#821](https://github.com/felangel/bloc/pull/821))
-- Replace `transformStates` with `transformTransitions` ([#840](https://github.com/felangel/bloc/pull/840))
-- Fix null `stackTrace` in `onError` ([#963](https://github.com/felangel/bloc/pull/963))
+- Update to `bloc: ^4.0.0-dev.1`
+
+# 3.2.0
+
+- Fix type inference for: `MultiBlocProvider`, `MultiRepositoryProvider`, `MultiBlocListener` ([#773](https://github.com/felangel/bloc/pull/773))
+- Fix swallowed exceptions within `BlocProvider` and `RepositoryProvider` ([#807](https://github.com/felangel/bloc/issues/807))
+- Add `BlocProviderExtension` and `RepositoryProviderExtension` on `BuildContext` ([#608](https://github.com/felangel/bloc/issues/608))
+
+# 3.1.0
+
+- Expose lazy parameter on `RepositoryProvider` and `BlocProvider` ([#749](https://github.com/felangel/bloc/pull/749))
+- Updated to `provider: ^4.0.1` ([#748](https://github.com/felangel/bloc/issues/748))
+- Add `BlocConsumer` ([#545](https://github.com/felangel/bloc/issues/545))
+- Export `bloc` as part of `flutter_bloc`
 
 # 3.0.0
 
-- Upgrade to `rxdart ^0.23.0`
-- Upgrade to `Dart >= 2.6.0`
+- Updated to `bloc: ^3.0.0` ([#700](https://github.com/felangel/bloc/pull/700))
+- Updated to `flutter >=1.12.1` ([#700](https://github.com/felangel/bloc/pull/700))
+- Updated to `provider: ^4.0.0` ([#700](https://github.com/felangel/bloc/pull/700), [#734](https://github.com/felangel/bloc/pull/734))
+- Revert `BlocBuilder` and `BlocListener` condition behavior to set `previousState` to the previous bloc state ([#709](https://github.com/felangel/bloc/issues/709))
 
 # 3.0.0-dev.1
 
-- Upgrade to `rxdart ^0.23.0`
+- Updated to `bloc: ^3.0.0-dev.1`
+
+# 2.1.1
+
+- Fix internal analysis warnings
+- Enforce provider `^3.2.0`
+
+# 2.1.0
+
+- Deprecate `builder` in `BlocProvider` in favor of `create` to align with `provider`.
+- Deprecate `builder` in `RepositoryProvider` in favor of `create` to align with `provider`.
+
+# 2.0.1
+
+- Fix `BlocBuilder` and `BlocListener` condition behavior to set `previousState` to the previous state used by `BlocBuilder`/`BlocListener` instead of the previous state of the `bloc`.
+- Minor Documentation Updates
 
 # 2.0.0
 
-- Allow blocs to finish processing pending events on `close` ([#639](https://github.com/felangel/bloc/issues/639))
-- Documentation Updates
-
-# 1.0.1
-
-- Bugfix: Exceptions thrown in `onTransition` are passed to `onError` and should not break bloc functionality ([#641](https://github.com/felangel/bloc/issues/641))
+- Updated to `bloc: ^2.0.0` and Documentation Updates
 - Adhere to [effective dart](https://dart.dev/guides/language/effective-dart) ([#561](https://github.com/felangel/bloc/issues/561))
-- Documentation and Example Updates
 
 # 1.0.0
 
-- `dispatch` and `dispose` removed
+Updated to `bloc: ^1.0.0` and Documentation Updates
+
+# 0.22.1
+
+Minor Bugfixes and Documentation Updates
+
+# 0.22.0
+
+Updated to `bloc: ^0.16.0` and Documentation Updates
+
+# 0.21.0
+
+Updated to `bloc: ^0.15.0` and Documentation Updates
+
+# 0.20.1
+
+- Minor Updates to Package Dependencies
 - Documentation Updates
 
-# 0.16.1
+# 0.20.0
 
-- Minor Documentation Updates
+- Add Automatic Bloc Lookup to `BlocBuilder` and `BlocListener` ([#415](https://github.com/felangel/bloc/pull/415))
+- Support for `BlocProvider` instantiation and look-up within the same `BuildContext` ([#415](https://github.com/felangel/bloc/pull/415))
+- Documentation Updates
+
+# 0.19.1
+
+Add optional `condition` to `BlocListener` to control listener calls ([#406](https://github.com/felangel/bloc/pull/406)) and Documentation Updates
+
+# 0.19.0
+
+Addresses [#354](https://github.com/felangel/bloc/issues/354)
+
+#### BlocProvider
+
+- Refactor `BlocProvider` to extend `Provider`
+- Rename `BlocProviderTree` to `MultiBlocProvider`
+
+#### ImmutableProvider
+
+- Refactor `ImmutableProvider` to extend `Provider`
+- Rename `ImmutableProvider` to `RepositoryProvider`
+- Rename `ImmutableProviderTree` to `MultiRepositoryProvider`
+
+#### BlocListener
+
+- Rename `BlocListenerTree` to `MultiBlocListener`
+
+#### Documentation
+
+- Inline documentation updates/improvements
+
+# 0.18.3
+
+Fix `BlocProvider` bug where `copyWith` does not preserve `dispose` value ([#376](https://github.com/felangel/bloc/issues/376)).
+
+# 0.18.2
+
+Fix `BlocListener` bug where `listener` gets called even when no state change occurs ([#368](https://github.com/felangel/bloc/issues/368)).
+
+# 0.18.1
+
+Minor Documentation Updates
+
+# 0.18.0
+
+Expose `ImmutableProvider` & `ImmutableProviderTree` to enable developers to provide immutable values, such as repositories, throughout the widget tree ([#364](https://github.com/felangel/bloc/pull/364)) and Documentation Updates
+
+# 0.17.0
+
+Update `BlocProvider` to automatically `dispose` the provided bloc ([#349](https://github.com/felangel/bloc/pull/349)) and Documentation Updates
 
 # 0.16.0
 
-- Bloc extends `Stream<State>` ([#558](https://github.com/felangel/bloc/issues/558))
-  - `bloc.state.listen` -> `bloc.listen`
-  - `bloc.currentState` -> `bloc.state`
-- Bloc implements `Sink<Event>` ([#558](https://github.com/felangel/bloc/issues/558))
-  - `dispatch` deprecated in favor of `add`
-  - `dispose` deprecated in favor of `close`
-- Documentation and Example Updates
+Update `BlocProvider` to expose `builder` and `dispose` ([#344](https://github.com/felangel/bloc/pull/344) and [#347](https://github.com/felangel/bloc/pull/347)) and Documentation Updates
+
+# 0.15.1
+
+Fix `null` initial `previousState` in `BlocBuilder` `condition` ([#328](https://github.com/felangel/bloc/issues/328)) and Documentation Updates
 
 # 0.15.0
 
-- Removed Bloc `event` Stream ([#326](https://github.com/felangel/bloc/issues/326))
-- Renamed `transform` to `transformEvents`
-- Added `transformStates` ([#382](https://github.com/felangel/bloc/issues/382))
-
-# 0.14.4
-
-Additional Dependency and Documentation Updates.
-
-# 0.14.3
-
-Dependency and Documentation Updates.
-
-# 0.14.2
-
-- Deprecated Bloc `event` Stream ([#326](https://github.com/felangel/bloc/issues/326))
-- Documentation Updates
-
-# 0.14.1
-
-Internal `BlocDelegate` update and Documentation Updates.
+Added optional `condition` to `BlocBuilder` to control widget rebuilds ([#315](https://github.com/felangel/bloc/issues/315)) and Documentation Updates
 
 # 0.14.0
 
-`BlocDelegate` initialization improvements and Documentation Updates.
-
-- `BlocSupervisor().delegate = ...` is now `BlocSupervisor.delegate = ...` ([#304](https://github.com/felangel/bloc/issues/304)).
+Updated to `bloc: ^0.14.0` and Documentation Updates
 
 # 0.13.0
 
-`Bloc` and `BlocDelegate` Improvements, new Features, and Documentation Updates.
-
-- Improved `dispose` to ignore pending events ([#257](https://github.com/felangel/bloc/issues/257)).
-- Exposed `event` stream on `Bloc` similar to `state` stream to expose a `Stream` of `dispatched` events ([#259](https://github.com/felangel/bloc/issues/259)).
-- Update to use `rxdart` version `^0.22.0` ([#265](https://github.com/felangel/bloc/issues/265)).
-- `BlocDelegate` methods include a reference to the `Bloc` instance ([#259](https://github.com/felangel/bloc/issues/259)).
-- Added `onEvent` to `Bloc` and `BlocDelegate` ([#259](https://github.com/felangel/bloc/issues/259)).
+Updated to `bloc: ^0.13.0` and Documentation Updates
 
 # 0.12.0
 
-Updated `transform` to enable advanced event filtering and processing and Documentation Updates.
-
-# 0.11.2
-
-Added `BlocDelegate` `onError` and `onTransition` mustCallSuper and Documentation Updates
+Added `BlocListenerTree` and Documentation Updates
 
 # 0.11.1
 
-Added `dispose` mustCallSuper and Documentation Updates
+Broaden Dart version range and Minor Documentation Updates
 
 # 0.11.0
 
-Update `mapEventToState` to remove unnecessary argument for `currentState`
+Updated to `bloc: ^0.12.0` and Documentation Updates
 
-- `Stream<S> mapEventToState(S currentState, E event)` -> `Stream<S> mapEventToState(E event)`
-- Documentation Updates
-- Example Updates
+# 0.10.1
+
+Invoke `BlocWidgetListener` on initial state and Documentation Updates
 
 # 0.10.0
 
-Updated to `rxdart ^0.21.0` and Documentation Updates
-
-# 0.9.5
-
-Minor Enhancements to Code Style and Documentation.
-
-# 0.9.4
-
-Calls to `dispatch` after `dispose` has been called trigger `onError` in the `Bloc` and `BlocDelegate`.
-
-# 0.9.3
-
-Restrict `rxdart` to `">=0.18.1 <0.21.0"` due to breaking changes.
-
-# 0.9.2
-
-Additional Minor Updates to Documentation
+Added `BlocListener` and Documentation Updates
 
 # 0.9.1
 
-Minor Updates to Documentation
+Minor Updates to Documentation.
 
 # 0.9.0
 
-`Bloc` and `BlocDelegate` Error Handling
-
-- Added `onError` to `Bloc` for local error handling.
-- Added `onError` to `BlocDelegate` for global error handling.
-
-# 0.8.4
-
-Blocs handle exceptions thrown in `mapEventToState` and documentation updates.
-
-# 0.8.3
-
-Minor Internal Improvements and Documentation Updates
-
-# 0.8.2
-
-Additional Minor Updates to Documentation
-
-# 0.8.1
-
-Minor Updates to Documentation
+Updated to `bloc: ^0.11.0` and Documentation Updates
 
 # 0.8.0
 
-Blocs ignore duplicate states
-
-# 0.7.8
-
-Additional Minor Updates to Documentation
-
-# 0.7.7
-
-Additional Minor Updates to Documentation
-
-# 0.7.6
-
-Minor Updates to Documentation
-
-# 0.7.5
-
-Exposed `currentState` in `Bloc`
-
-- Updates to Documentation.
-
-# 0.7.4
-
-Updated `mapEventToState` parameter name
-
-- `Stream<S> mapEventToState(S state, E event)` -> `Stream<S> mapEventToState(S currentState, E event)`
-- Updates to Documentation.
-- Updates to Example.
-
-# 0.7.3
-
-Minor Updates to Documentation
-
-# 0.7.2
-
-`Transition` Fix
-
-- `Bloc` with `mapEventToState` which returns multiple states per event will now correctly report the `Transitions`.
+Updated to `bloc: ^0.10.0` and Documentation Updates
 
 # 0.7.1
 
-Improvements to `Bloc` usage in pure Dart applications.
-
-- `Bloc` state is seeded with `initialState` automatically
+Minor Updates to Documentation.
 
 # 0.7.0
 
-Added `BlocSupervisor` and `BlocDelegate`.
+Added `BlocProviderTree` and Documentation Updates
 
-- `BlocSupervisor` notifies `BlocDelegate` of `Transitions`
-- `BlocDelegate` exposes `onTransition` which is invoked for all `Bloc` `Transitions`.
+# 0.6.3
 
-# 0.6.0
+Updated to `bloc:^0.9.3` and Minor Updates to Documentation
 
-`Transitions` and `initialState` updates.
+# 0.6.2
 
-- Added `Transition`s and `onTransition`
-- Made `initialState` required
+Additional Minor Updates to Documentation
 
-# 0.5.2
-
-Additional minor Updates to Documentation.
-
-# 0.5.1
+# 0.6.1
 
 Minor Updates to Documentation
 
+# 0.6.0
+
+Updated to `bloc: ^0.9.0`
+
+# 0.5.4
+
+Additional Minor Updates to Documentation
+
+# 0.5.3
+
+Additional Minor Updates to Documentation
+
+# 0.5.2
+
+Minor Updates to Documentation
+
+# 0.5.1
+
+`BlocProvider` performance improvements
+
 # 0.5.0
 
-Moved Flutter Widgets to flutter_bloc package
+Updated to `bloc: ^0.8.0`
+
+# 0.4.12
+
+Additional Minor Updates to Documentation
+
+# 0.4.11
+
+Additional Minor Updates to Documentation
+
+# 0.4.10
+
+Additional `BlocBuilder` enhancements
+
+- `BlocBuilder` no longer filters out States giving developers full control
+
+Minor Updates to Documentation and Examples
+
+# 0.4.9
+
+Additional `BlocBuilder` enhancements
+
+- `BlocBuilder` no longer has a dependency on `RxDart`
+- Using `bloc: ">=0.7.5 <0.8.0"`
+
+# 0.4.8
+
+Additional `BlocProvider` performance improvements
+
+# 0.4.7
+
+Minor Updates to Documentation and Examples
+
+# 0.4.6
+
+Bug Fixes
+
+- Fixed bug where `BlocBuilder` would return initial state instead of the latest state
+
+# 0.4.5
+
+Additional Minor Updates to Documentation
+
+# 0.4.4
+
+Minor updates to documentation and improved error reporting in `BlocProvider`
+
+# 0.4.3
+
+`BlocBuilder` performance improvements
 
 # 0.4.2
 
-Additional minor Updates to Documentation.
+`BlocProvider` performance improvements
 
 # 0.4.1
 
-Minor Updates to Documentation.
+Minor Updates to Documentation
 
 # 0.4.0
 
-Added `BlocProvider`.
+Updated to `bloc: ^0.7.0`
 
-- `BlocProvider.of(context)`
-- Updates to Documentation.
-- Updates to Example.
+# 0.3.1
+
+Minor Updates to Documentation
 
 # 0.3.0
 
-Updated `mapEventToState` to take current state as an argument.
-
-- `Stream<S> mapEventToState(E event)` -> `Stream<S> mapEventToState(S state, E event)`
-- Updates to Documentation.
-- Updates to Example.
-
-# 0.2.5
-
-Additional Minor Updates to Documentation.
-
-# 0.2.4
-
-Additional Minor Updates to Documentation.
-
-# 0.2.3
-
-Additional Minor Updates to Documentation.
-
-# 0.2.2
-
-Additional Minor Updates to Documentation.
+Updated to `bloc: ^0.6.0`
 
 # 0.2.1
 
-Minor Updates to Documentation.
+Minor Updates to Documentation
 
 # 0.2.0
 
-Added Support for Stream Transformation
+Updates to `BlocBuilder` and `BlocProvider`
 
-- Includes `Stream<E> transform(Stream<E> events)`
-- Updates to Documentation
-
-# 0.1.2
-
-Additional Minor Updates to Documentation.
+- `BlocBuilder` does not automatically dispose a `Bloc`. Developers are now responsible for determining when to call `Bloc.dispose()`
+- `BlocProvider` support for `of(context)` with generics
+  - Support for multiple nested `BlocProviders` with different Bloc Types.
 
 # 0.1.1
 
-Minor Updates to Documentation.
+Minor Updates to Documentation
 
 # 0.1.0
 
 Initial Version of the library.
 
-- Includes the ability to create a custom Bloc by extending `Bloc` class.
 - Includes the ability to connect presentation layer to `Bloc` by using the `BlocBuilder` Widget.
+- Includes `BlocProvider`, a DI widget that allows a single instance of a bloc to be provided to multiple widgets within a subtree.
